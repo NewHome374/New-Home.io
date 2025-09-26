@@ -333,4 +333,19 @@ footer p {
   line-height: 1.6;
   text-align: justify;
 }
+/* celulares
+@media(max-width:600px){
+   body{
+      front-size:14px;
+      padding:10px;
+      }
+   nav{
+      flex-direction:column;
+      }
+   img{
+      max-width:100%;
+      height:auto;
+      }
+   }
+      
 
