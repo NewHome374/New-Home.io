@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - New Home</title>
+  <link rel="stylesheet" href="../css/style.css"> 
+  <link rel="stylesheet" href="../css/style3.css">
+<style>
+
+/* Estilos solo para la galería de productos */
+    .productos {
+     display: flex;
+      width: 600px;
+      height: 300px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 0,5px 
+      }
+
+    .productos img {
+      width: 10px;
+      flex-grow: 3;
+      object-fit: cover;
+      opacity: .4;
+      transition: .5s ease;
+    }
+
+    .productos img:hover {
+      cursor: crosshair;
+      width: 100px;
+      opacity: 2;
+      filter: contrast(120%);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="../img/logo.png" width="100" alt="Logo New Home">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="nosotros.html" class="activo">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Sección principal -->
+    <section id="quienes-somos" class="seccion-destacada">
+      <div class="contenedor">
+        <div class="card-servicio">
+        <div class="texto">
+          <h2>¿Quiénes somos?</h2>
+          <p> 
+            En <strong>New Home</strong>,En New Home creemos que cada perro y gato merece una vida digna y llena de amor. Por eso, 
+            trabajamos día a día rescatando a los que han sido abandonados o maltratados, brindándoles cuidados, protección y la oportunidad de comenzar de nuevo.
+            Nuestra labor no termina ahí: también buscamos generar conciencia sobre la importancia de la adopción responsable, invitando a la sociedad a elegir salvar
+            vidas en lugar de comprarlas. Así, juntos, construimos un futuro más justo, solidario 
+            y lleno de esperanza para cada huella que rescatamos. 
+          </p>
+          <section class="productos">
+      <img src="../img/producto1.jpg"alt="Producto1">
+      <img src="../img/producto2.jpg"alt="Producto2">
+      <img src="../img/producto3.jpg"alt="Producto3">
+    </section>
+       </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Sección de valores -->
+    <section id="valores">
+      <h2>Nuestros Valores</h2>
+
+      <div class="contenedor-servicios">
+        <div class="card-servicio">
+          <h3>Amor</h3>
+          <p>Cada rescate se hace con compromiso y afecto, buscando siempre lo mejor para los animales, el amor verdadero se escribe con patas y corazones. </p>
+          <center><img src="https://img.freepik.com/vector-premium/diseno-mascotas_24877-28848.jpg?semt=ais_incoming&w=740&q=80" width="200"></center>
+        </div>
+        <div class="card-servicio">
+          <h3>Tolerancia</h3>
+          <p>La tolerancia nos enseña a aceptar sus tiempos,
+              sus miedos y su manera única de amar.
+              Cada animal tiene una historia, un ritmo,
+              y un corazón que late con confianza a su propio paso.
+              No se trata de exigirles, sino de acompañarlos.
+              Amar también es saber esperar.</p>
+         <center> <img src="../img/servi2.png" width="280"></center>
+        </div>
+        <div class="card-servicio">
+          <h3>Lealtad</h3>
+          <p>Su lealtad es eterna, incondicional y sin medida. Por eso, cuidarlos con respeto, 
+            amor y responsabilidad no es solo un deber, es un acto de justicia hacia quienes solo saben dar sin pedir nada. Su lealtad es eterna… 
+            ¿cómo no cuidarlos con todo el corazón? Ellos confían en nosotros, 
+          y no podemos fallarles.</p>
+          <img src="../img/Servi1.jpg" width="300">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 New Home - Todos los derechos reservados</p>
+    <p>Contacto: <a href="mailto:newhome123412@gmail.com">newhome123412@gmail.com</a></p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
