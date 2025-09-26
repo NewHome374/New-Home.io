@@ -390,7 +390,7 @@ footer p {
   }
 
   .productos img {
-    width: 80%;
+    width: auto;
     max-width: 300px;
   }
 
@@ -406,5 +406,6 @@ footer p {
 }
 
       
+
 
 
