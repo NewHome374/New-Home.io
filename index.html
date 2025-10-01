@@ -1,164 +1,110 @@
-<!--Inicio Doc-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina Web</title>
+  <title>New Home</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style3.css">
 </head>
-<style>
-  /* Estilos solo para galeria de productos */
-  .productos {
-    display: flex;
-    width: 1000px;
-    height: 430px;
-    margin:20px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 8px 2500px rgba(135, 1, 139, 0.89);
-}
-.productos img {
-    width: 100px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-}
-.productos img:hover {
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-    }
-</style>
 <body>
 
   <!-- Encabezado principal -->
   <header>
     <div class="navbar">
       <div class="logo">
-        <img src="logo.png" width="100" alt="Logo UsmeTours">
+        <img src="logo.png" width="90" alt="Logo New Home">
       </div>
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       </nav>
-
     </div>
   </header>
 
   <!-- Contenido principal -->
   <main>
-    <!-- Sección de presentación -->
+    <!-- Presentación -->
     <section id="inicio" class="presentacion">
       <div class="contenido-presentacion">
-      <h2>Bienvenidos a <samp>New Home</samp></h2>
-      <p>En New Home, no solo salvamos perros y gatos en
-        situación de abandono o maltrato. Les damos
-        atención veterinaria, cariño y los preparamos
-        para encontrar una familia que los ame de verdad. </p>
-        <a href="#servicios" class="btn">Conoce nuestro servicio</a>
+        <h2>Bienvenidos a <span>New Home</span></h2>
+        <p>En New Home, no solo salvamos perros y gatos en situación de abandono o maltrato. 
+        Les damos atención veterinaria, cariño y los preparamos para encontrar una familia que los ame de verdad.</p>
+        <a href="#servicios" class="btn">Conoce nuestros servicios</a>
       </div>
       <div class="imagen-presentacion">
-      <img src="logo.png"> 
+        <img src="logo.png" alt="Imagen New Home"> 
       </div>
     </section>
 
-    <!-- Sección sobre el equipo o la misión -->
+    <!-- Sobre Nosotros -->
     <section id="nosotros">
-      <h2 class="sobre-nosostros">Sobre Nosotros</h2>
+      <h2 class="titulo-nosotros">Sobre Nosotros</h2>
       <div class="contenedor-nosotros">
-      
         <div class="card-nosotros">
-        <h3>Nuestra Historia</h3>
-        <p>New Home nació con un sueño sencillo pero muy
-          poderoso: darle una segunda oportunidad a los animales
-          que viven en la calle. Todo comenzó cuando un
-          grupo de personas vio la necesidad de ayudar
-          a esos animales que no tenían comida, hogar ni cariño.</p>
-      </div>
+          <h3>Nuestra Historia</h3>
+          <p>New Home nació con un sueño sencillo pero poderoso: darle una segunda oportunidad a los animales 
+          que viven en la calle. Todo comenzó cuando un grupo de personas vio la necesidad de ayudar a esos 
+          animales que no tenían comida, hogar ni cariño.</p>
+        </div>
         <div class="card-nosotros">
-        <h3>Mision</h3>
-        <p>Misión
-          Rescatamos perros y gatos que han sido abandonados
-          o maltratados para darles una nueva oportunidad de
-          vida. Les damos cariño, atención médica, comida y
-          un lugar seguro mientras buscamos un hogar donde
-          puedan ser amados y cuidados como se merecen. De igual
-          forma trabajamos para enseñar a las personas la
-          importancia de cuidar bien a sus mascotas, adoptar
-          en lugar de comprar y esterilizar para evitar
-          más animales sin hogar.</p>
+          <h3>Misión</h3>
+          <p>Rescatamos perros y gatos que han sido abandonados o maltratados para darles una nueva oportunidad 
+          de vida. Les damos cariño, atención médica, comida y un lugar seguro mientras buscamos un hogar donde 
+          puedan ser amados. También trabajamos en educación sobre adopción, esterilización y tenencia responsable.</p>
         </div>
         <div class="card-nosotros">
           <h3>Visión</h3>
-        <p> Visión
-          Queremos construir un mundo donde ningún perro
-          o gato tenga que vivir en la calle ni sufrir
-          por el abandono o el maltrato. Soñamos con una
-          comunidad más consciente y solidaria, donde
-          todos entiendan que los animales también sienten,
-          y merecen respeto, amor y un hogar. Nuestro deseo
-          es que cada vez más personas se sumen a esta causa,
-          adopten con responsabilidad y se conviertan
-          en parte del cambio. </p>
+          <p>Queremos construir un mundo donde ningún perro o gato tenga que vivir en la calle ni sufrir por el 
+          abandono. Soñamos con una comunidad consciente, solidaria y responsable con los animales.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sección de servicios o productos -->
+    <!-- Servicios -->
     <section id="servicios">
-      <h2 class="titulo-servicio">Nuestros servicios</h2>
+      <h2 class="titulo-servicios">Nuestros Servicios</h2>
       <div class="contenedor-servicios">
-
         <div class="card-servicio">
-        <h3>Servicio de refugio</h3>
-        <p>El rescate y cuidado de animales busca proteger a los que están en peligro o abandono, dándoles atención, 
-          refugio y una adopción responsable, promoviendo también el respeto y la tenencia responsable.</p>
-      </div>
-
-      <div class="card-servicio">
-        <h3>Servicio de adopción</h3>
-        <p>La adopción de perros y gatos es un acto de amor que les da una segunda
-          oportunidad a los animales que han sido abandonados o rescatados. Al brindarles
-          un hogar seguro, atención y cariño, no solo mejoramos su vida, sino que también 
-          ayudamos a reducir el abandono, fomentamos la esterilización y promovemos la
-          tenencia responsable.</p>
-      </div>
-      <div class="card-servicio">
-       <h3>Campañas de adopción</h3>
-      <p>Organizamos jornadas de adopción responsable para que cada animalito encuentre una familia que lo ame, le cuide y le brinde una segunda oportunidad de ser feliz. 
-        Porque ellos no necesitan mucho, solo amor, respeto y un hogar para siempre.</p>
-      </div>
-
-
+          <h3>Servicio de Refugio</h3>
+          <p>Rescate y cuidado de animales en peligro o abandono, brindándoles atención, refugio y adopción responsable.</p>
+        </div>
+        <div class="card-servicio">
+          <h3>Servicio de Adopción</h3>
+          <p>Les damos a los animales rescatados una segunda oportunidad en un hogar lleno de amor, promoviendo la adopción responsable.</p>
+        </div>
+        <div class="card-servicio">
+          <h3>Campañas de Adopción</h3>
+          <p>Organizamos jornadas de adopción responsable para que cada animalito encuentre una familia que lo ame y cuide para siempre.</p>
+        </div>
       </div>
     </section>
-  <!--Productos-->
-  <section class="productos">
-    <img src="hogar.png">
-    <img src="comida.png">
-    <img src="vacunacion.png">
-    
-  </section>
+
+    <!-- Galería -->
+    <section class="productos">
+      <img src="hogar.png" alt="Refugio">
+      <img src="comida.png" alt="Alimentación">
+      <img src="vacunacion.png" alt="Vacunación">
+    </section>
   </main>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 New Home - Todos los derechos reservados</p>
-    <p>Contacto: <a href="mailto:correo@ejemplo.com">newhome123412@gmail.com</a></p>
+    <p>Contacto: <a href="mailto:newhome123412@gmail.com">newhome123412@gmail.com</a></p>
   </footer>
 
- <script src="script.js"></script>
+  <script>
+    // Toggle menú responsive
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
-
 </html>
-
-
-
