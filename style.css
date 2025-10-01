@@ -11,12 +11,14 @@
 /* ======================================
    ESTILOS BASE
 ====================================== */
-body {
+html, body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   background-color: #F0CA90;
   color: #000000;
-  padding-top: 150px; /* espacio para el header fijo */
+  padding-top: 0px;
+  width: 100%; 
+  overflow-x: hidden ;/* espacio para el header fijo */
 }
 
 a {
@@ -30,42 +32,6 @@ a:hover {
 }
 
 
-/* ======================================
-   HEADER Y NAVEGACIÓN
-====================================== */
-header {
-  background: #000000;
-  color: #d504ff;
-  padding: 10px 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: #fab7f4;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  color: #080808;
-}
 
 
 /* ======================================
@@ -322,89 +288,75 @@ footer p {
 /* ======================================
    RESPONSIVE
 ====================================== */
-/* ======================================
-   OPTIMIZACIÓN PARA CELULARES
-   ====================================== */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding-top: 120px;
-  }
 
-  header {
+/**==================================================
+/* Navbar general */
+.menu-toggle svg {
+  fill: none;           /* elimina relleno */
+  stroke: #ffffff;      /* <-- color de las rayitas */
+  stroke-width: 2.5;    /* grosor de las líneas */
+  cursor: pointer;
+  transition: stroke 0.3s ease;
+}
+
+.menu-toggle svg:hover {
+  stroke: #8852c5;      /* color al pasar el mouse */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: #000000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  /* Menú oculto por defecto */
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgb(0, 0, 0);
+    width: 200px;
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
+    padding: 20px;
+    box-shadow: -2px 4px 8px rgb(255, 255, 255);
+    border-radius: 8px 0 0 8px;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    align-items: flex-start;
-  }
-
-  main {
-    padding: 10px;
-  }
-
-  section {
-    padding: 15px;
-  }
-
-  .presentacion,
-  .contenedor-nosotros,
-  .contenedor-servicios {
-    grid-template-columns: 1fr;
-  }
-
-  .presentacion h2 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .presentacion p {
-    text-align: center;
-  }
-
-  .presentacion .btn {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .imagen-presentacion img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .productos {
-    flex-direction: column;
-    align-items: center;
     gap: 15px;
   }
 
-  .productos img {
-    width: 90%;
-    max-width: 300px;
+  .menu-toggle {
+    display: block;
   }
 
-  .card-servicio,
-  .card-nosotros {
-    padding: 20px;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    padding: 10px;
+  nav.active {
+    display: flex;
   }
 }
-
-
-
-      
-
-
-
