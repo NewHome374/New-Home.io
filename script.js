@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     activarMenuDinamico();
     animacionesScroll();
     validarFormulario();
+    menuHamburguesa(); // 👈 activamos el menú responsive
 });
 
 // ----------- MENÚ ACTIVO DINÁMICO -----------
@@ -20,7 +21,7 @@ function activarMenuDinamico() {
 // ----------- ANIMACIONES AL HACER SCROL (Optimizado con IntersectionObserver) -----------
 function animacionesScroll() {
     const elements = document.querySelectorAll(".fade-in");
-   const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
@@ -31,7 +32,6 @@ function animacionesScroll() {
 
     elements.forEach(el => observer.observe(el));
 } 
-    
 
 // ----------- FORMULARIO DE CONTACTO (Validación Mejorada) -----------
 function validarFormulario() {
@@ -104,4 +104,16 @@ function limpiarError(input) {
         error.remove();
     }
     input.classList.remove("input-error");
+}
+
+// ----------- MENÚ HAMBURGUESA (Responsive) -----------
+function menuHamburguesa() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+
+    if (!menuToggle || !nav) return;
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
 }
