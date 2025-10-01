@@ -1,37 +1,412 @@
-/* NAVBAR responsive */
-.nav-links {
+/* ======================================
+   RESET GENERAL
+====================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ======================================
+   ESTILOS BASE
+====================================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #F0CA90;
+  color: #000000;
+  padding-top: 150px; /* espacio para el header fijo */
+}
+
+a {
+  text-decoration: none;
+  color: #3721b6;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #000000;
+}
+
+
+/* ======================================
+   HEADER Y NAVEGACIÓN
+====================================== */
+header {
+  background: #000000;
+  color: #d504ff;
+  padding: 10px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
+nav ul li a {
+  color: #fab7f4;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #080808;
+}
+
+
+/* ======================================
+   SECCIONES GENERALES
+====================================== */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-bottom: 10px;
+  color: #000000;
+  border-left: 5px solid #8852c5;
+  padding-left: 10px;
+}
+
+
+/* ======================================
+   PRESENTACIÓN (Inicio)
+====================================== */
+.presentacion {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.presentacion h2 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.presentacion h2 span {
+  color: #8852c5;
+}
+
+.presentacion p {
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.presentacion .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #8852c5;
   color: #fff;
-  margin-left: 15px;
+  border-radius: 25px;
+  transition: 0.3s ease;
 }
 
-/* Responsive */
+.presentacion .btn:hover {
+  background: #6a3ba1;
+}
+
+.imagen-presentacion img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ======================================
+   NOSOTROS
+====================================== */
+#nosotros {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.titulo-nosotros {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.contenedor-nosotros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card-nosotros {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-nosotros:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgb(233, 0, 97);
+}
+
+.card-nosotros h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.card-nosotros p {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+/* ======================================
+   SERVICIOS
+====================================== */
+#servicios {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.titulo-servicios {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.contenedor-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-servicio {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(53, 1, 31, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servicio:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgb(233, 0, 97);
+}
+
+.card-servicio h3 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.card-servicio p {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.5;
+}
+
+
+/* ======================================
+   GALERÍA DE PRODUCTOS
+====================================== */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(135, 1, 139, 0.4);
+}
+
+.productos img {
+  width: 30%;
+  max-width: 100px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+
+.productos img:hover {
+  cursor: pointer;
+  width: 100%;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+
+/* ======================================
+   CONTENIDO ADICIONAL
+====================================== */
+article {
+  margin-bottom: 20px;
+}
+
+article h3 {
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+article p {
+  text-align: justify;
+}
+
+aside {
+  background: #22c579;
+  padding: 15px;
+  border-left: 4px solid #000000;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+
+/* ======================================
+   FOOTER
+====================================== */
+footer {
+  text-align: center;
+  background: #0f0f0f;
+  color: #e9dddd;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+/* ======================================
+   OPTIMIZACIÓN PARA CELULARES
+   ====================================== */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  body {
+    font-size: 14px;
+    padding-top: 120px;
+  }
+
+  header {
     flex-direction: column;
-    background: #111;
+    align-items: flex-start;
     padding: 15px;
-    border-radius: 10px;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 200px;
   }
 
-  .nav-links.active {
-    display: flex;
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: flex-start;
   }
 
-  .menu-toggle {
+  main {
+    padding: 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .presentacion,
+  .contenedor-nosotros,
+  .contenedor-servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .presentacion h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .presentacion p {
+    text-align: center;
+  }
+
+  .presentacion .btn {
     display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .imagen-presentacion img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .productos {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .productos img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .card-servicio,
+  .card-nosotros {
+    padding: 20px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 10px;
   }
 }
+
+
+
+      
+
+
+
+
+
