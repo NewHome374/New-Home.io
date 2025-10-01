@@ -360,3 +360,43 @@ nav ul li a {
     display: flex;
   }
 }
+/**=======================================
+    COMENTARIOS
+   =======================================
+   /* ======================================
+   HEADER Y NAVEGACIÓN
+====================================== 
+header {
+  background: #000000;
+  color: #d504ff;
+  padding: 10px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fab7f4;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #080808;
+}
+*/ 
