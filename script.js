@@ -1,26 +1,27 @@
 // script.js
+
 document.addEventListener("DOMContentLoaded", () => {
     activarMenuDinamico();
     animacionesScroll();
     validarFormulario();
 });
+//Menu-----------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
 
-// ----------- MENÚ ACTIVO DINÁMICO -----------
-function activarMenuDinamico() {
-    const navLinks = document.querySelectorAll("nav ul li a");
-    const currentPage = window.location.pathname.split("/").pop();
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+});
 
-    navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("active");
-        }
-    });
-}
 
-// ----------- ANIMACIONES AL HACER SCROL (Optimizado con IntersectionObserver) -----------
+
+
+// ----------- ANIMACIONES AL HACER SCROLL (Optimizado con IntersectionObserver) -----------
 function animacionesScroll() {
     const elements = document.querySelectorAll(".fade-in");
-   const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
@@ -30,8 +31,7 @@ function animacionesScroll() {
     }, { threshold: 0.2 });
 
     elements.forEach(el => observer.observe(el));
-} 
-    
+}
 
 // ----------- FORMULARIO DE CONTACTO (Validación Mejorada) -----------
 function validarFormulario() {
